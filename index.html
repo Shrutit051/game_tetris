@@ -230,6 +230,13 @@
 
     }
 
+    window.onload = function() {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        document.getElementById('mobile-controls').style.display = 'flex';
+      }
+    };
+
     function showStats() {
       stats.domElement.id = 'stats';
       get('menu').appendChild(stats.domElement);
