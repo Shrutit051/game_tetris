@@ -69,6 +69,7 @@
     <canvas id="canvas">
       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
     </canvas>
+  </div>
   <div id="mobile-controls" style="display: none;">
     <button onclick="move(DIR.LEFT)">◀️</button>
     <button onclick="rotate()">🔄</button>
@@ -233,13 +234,13 @@
 
     
 
-    window.onload = function() {
+    document.addEventListener("DOMContentLoaded", function() {
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      console.log("Is mobile?", isMobile); // Debug log
       if (isMobile) {
         document.getElementById('mobile-controls').style.display = 'flex';
       }
-    };
+    });
+
 
 
     function showStats() {
